@@ -1,0 +1,19 @@
+$fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
+$app-font-path:       "/build/fonts" !default;
+
+@import "~bootstrap/scss/bootstrap";
+@import "~@fortawesome/fontawesome-free/scss/fontawesome";
+@import "~@fortawesome/fontawesome-free/scss/brands";
+
+@import 'parameters';
+@import 'functions';
+@import 'card';
+@import 'layout';
+@import 'size';
+@import 'coloration';
+@import 'transformation';
+@import 'elements';
+
+
+
+

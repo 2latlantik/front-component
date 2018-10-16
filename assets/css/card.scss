@@ -1,0 +1,140 @@
+@keyframes flip {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+$colors_card: (
+        blue: #90C5FF,
+        cyan: #0FECEC,
+        green: #55AA55,
+        purple: #734A9E,
+        pink: #CD88AF,
+);
+
+.card-profile {
+  min-height:30rem;
+  min-width: 10rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.5rem;
+  position: relative;
+
+  .card-profile-header {
+    text-align: center;
+    height: 10rem;
+    border-radius: 1.5rem 1.5rem 0rem 0rem;
+
+  }
+  @each $name, $color in $colors_card {
+    .card-profile-header-#{$name}{
+      background: linear-gradient(to bottom, $color 0%, darken($color, 30%) 100%)
+    }
+  }
+
+  .card-picture {
+    height: 10rem;
+    position: absolute;
+    transform: translateX(-50%);
+    top: 5rem;
+    left: 50%;
+    :hover {
+      animation-name: flip;
+      animation-duration: 2s;
+    }
+  }
+
+  .card-profile-body {
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    min-height: 23rem;
+    border-radius: 0rem 0rem 1.5rem 1.5rem;
+  //  border: 1px solid $blue-hight;
+
+    span {
+      display: block;
+      &.separator {
+        margin: 1rem 0.5rem;
+        &:after {
+          content: '';
+          height: 0.2rem;
+          background: linear-gradient(to right, $blue 0, $blue 25%, $red 25%, $red 50%, $yellow 50%, $yellow 75%, $green 75%, $green 100%);
+          display: block;
+          width: 100%;
+          padding-left: 0.5rem;
+        }
+      }
+    }
+
+    .btn {
+      flex: 1 1 auto;
+      margin: 1rem;
+      padding: 1rem 2rem;
+      text-align: center;
+      text-transform: uppercase;
+      background-size: 200% auto;
+      box-shadow: 0 0 2rem #202a33;
+      border-radius: 1rem;
+      color: #fff;
+     // background-image: linear-gradient(to right, $blue-medium, $blue-hight, $blue-medium);
+      transition: all 1s;
+      &:hover {
+        background-position: right center;
+      }
+    }
+  }
+
+  @each $name, $color in $colors_card {
+    .card-profile-body-#{$name}{
+      border: 1px solid $color ;
+      .btn {
+        background-image: linear-gradient(to right, darken($color, 30%), $color, darken($color, 30%))
+      }
+    }
+  }
+
+  span {
+    i {
+      margin-top: 1rem;
+    }
+  }
+}
+
+span {
+  &.image--cover {
+    display: block;
+    text-align: center;
+    //background: #cccccc;
+  }
+
+}
+
+.image--cover {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  margin: 0rem;
+  object-fit: cover;
+  object-position: center right;
+
+}
+
+@each $name, $color in $colors_card {
+  .image--cover--#{$name}{
+    background: lighten($color, 10%);
+  }
+}
+
+.image--contain {
+  width: 100%;
+  height: auto;
+  min-width: 100%;
+  min-height: 100%;
+}

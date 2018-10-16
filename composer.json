@@ -1,0 +1,20 @@
+{
+    "name": "2latlantik/front-component",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "2latlantik",
+            "email": "nicolascoudenne@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "App\\" : "src"
+        }
+    },
+    "require": {
+        "slim/slim": "^3.0",
+        "slim/twig-view": "^2.4",
+        "monolog/monolog": "^1.23"
+    }
+}

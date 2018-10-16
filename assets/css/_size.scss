@@ -1,0 +1,52 @@
+.floating-panel {
+  width: 0;
+  &.floating-panel-open {
+    width: $widthLeftPanel;
+    +.header {
+      width: calc(100% - #{$widthLeftPanel});
+    }
+  }
+
+  .floating-panel-nav {
+    .floating-panel-root {
+      height: $heightHeader;
+      padding: 0 0 0 1.75rem;
+      font-size: 1.8rem;
+    }
+  }
+
+  .floating-panel-links {
+    padding: 1rem 1.5rem;
+    .nav {
+      margin-top: 2rem;
+    }
+    .floating-panel-link  {
+      line-height: 5rem;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+.header {
+  min-height: $heightHeader;
+  width: 100%;
+  .header-content {
+    width: 100%;
+    height: auto;
+    min-height: $heightHeader;
+  }
+}
+
+.page-wrapper-to-header {
+  margin-top: $heightHeader;
+}
+
+.content-wrapper {
+  padding-top: 3rem;
+  padding-left: $widthLeftPanel;
+  min-height: calc(100vh - #{$heightHeader} - 40rem);
+  .content-body {
+    margin: 0 3rem;
+    padding: 2.5rem;
+  }
+}

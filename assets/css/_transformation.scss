@@ -1,0 +1,19 @@
+.floating-panel {
+  overflow: hidden;
+  transition-duration: $transformationDuration;
+  transition-property: width, transform;
+  .floating-panel-nav {
+    transform: none;
+  }
+}
+
+.header {
+  transition-duration: $transformationDuration;
+  transition-property: width, transform;
+}
+
+.content-wrapper-minimized {
+  padding-left: 0px;
+  transition-duration: $transformationDuration;
+  transition-property: padding-left, transform;
+}

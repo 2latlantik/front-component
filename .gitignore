@@ -1,0 +1,8 @@
+.idea
+node_modules
+public/build
+public/fonts
+var
+vendor
+composer.lock
+package-lock.json

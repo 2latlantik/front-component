@@ -1,0 +1,26 @@
+.floating-panel {
+  background-color: #fff;
+  box-shadow: 0.5rem 0 0.9rem 0 rgba(0, 0, 0, 0.06);
+  .floating-panel-nav {
+    .floating-panel-root {
+      background: #fff;
+      border-bottom: 1px solid #2980B9;
+      box-shadow: 0 0.2rem 0.5rem #2980B9;
+    }
+  }
+}
+
+.header {
+  background: #2980B9; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.content-wrapper {
+  background: #f5f5f5;
+  .content-body {
+    background: #fff;
+    border: 0.1rem solid #ccc;
+    border-radius: 10px;
+  }
+}
